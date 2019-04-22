@@ -44,7 +44,7 @@ module.exports = {
         extensions: ['*', '.js', '.jsx']
     },
     devServer: {
-        contentBase: path.join(__dirname, 'docs'),
+        publicPath: '/',
         compress: true,
         port: 9000
     },

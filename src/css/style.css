@@ -1,3 +1,18 @@
-h1 {
-    color: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ccc3b5;
+}
+#app {
+    margin: 10% auto 0;
+    width: 40%;
+    min-width: 300px;
+    max-width: 600px;
+}
+#app h1 {
+    color: rgba(190, 0, 0, 0.60);
+    text-align: center;
 }

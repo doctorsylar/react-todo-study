@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
 import '../css/style.css';
 
+class TodoHeading extends Component {
+    render() {
+        return (
+            <div className="heading">
+
+            </div>
+        )
+    }
+}
 
 class App extends Component {
     constructor(props) {
@@ -8,8 +17,9 @@ class App extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>My Cool React App!</h1>
+            <div className='application-container'>
+                <h1>My Cool Todo-React.js App!</h1>
+
             </div>
         )
     }

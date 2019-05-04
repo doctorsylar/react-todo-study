@@ -6,11 +6,12 @@ class TodoHeading extends Component {
     render() {
         return (
             <div className="todo-heading">
-                <div className="toggle-all-container">
-
-                </div>
+                <div className="toggle-all-container"></div>
                 <div className="task-input-container">
-
+                    <input type="text"
+                           className="task-input"
+                           placeholder="What needs to be done?"
+                    />
                 </div>
             </div>
         )

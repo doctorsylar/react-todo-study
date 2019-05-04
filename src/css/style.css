@@ -25,5 +25,31 @@ h1 {
 
 }
 .todo-container .todo-heading {
-    height: 50px;
+    height: 65px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+.todo-heading .toggle-all-container {
+    width: 50px;
+    transform: rotate(90deg);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-heading .toggle-all-container::before {
+    content: '❯';
+    font-size: 22px;
+    color: #e6e6e6;
+}
+.todo-heading .task-input-container {
+    flex-grow: 1;
+}
+.todo-heading .task-input {
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    border: none;
+    padding: 0 5px;
 }

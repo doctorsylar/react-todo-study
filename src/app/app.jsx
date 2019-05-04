@@ -1,15 +1,31 @@
 import React, {Component} from 'react';
 import '../css/style.css';
 
+
 class TodoHeading extends Component {
     render() {
         return (
-            <div className="heading">
+            <div className="todo-heading">
+                <div className="toggle-all-container">
+
+                </div>
+                <div className="task-input-container">
+
+                </div>
+            </div>
+        )
+    }
+}
+class TodoContent extends Component {
+    render() {
+        return (
+            <div className="todo-content">
 
             </div>
         )
     }
 }
+
 
 class App extends Component {
     constructor(props) {
@@ -17,8 +33,9 @@ class App extends Component {
     }
     render() {
         return (
-            <div className='application-container'>
-                <h1>My Cool Todo-React.js App!</h1>
+            <div className='todo-container'>
+                <TodoHeading />
+                <TodoContent />
 
             </div>
         )

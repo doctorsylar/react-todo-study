@@ -6,13 +6,24 @@
 body {
     background-color: #ccc3b5;
 }
-#app {
-    margin: 10% auto 0;
-    width: 40%;
-    min-width: 300px;
-    max-width: 600px;
-}
-#app h1 {
+h1 {
     color: rgba(190, 0, 0, 0.60);
     text-align: center;
+}
+.app-container {
+    margin: 10% auto 0;
+}
+#app {
+    margin: 0 auto;
+    width: 80%;
+    min-width: 300px;
+    max-width: 550px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px 5px #222222;
+}
+.todo-container {
+
+}
+.todo-container .todo-heading {
+    height: 50px;
 }

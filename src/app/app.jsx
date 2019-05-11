@@ -5,7 +5,7 @@ import '../css/style.css';
 class TodoHeading extends Component {
     render() {
         return (
-            <div className="todo-heading">
+            <header className="todo-heading">
                 <div className="toggle-all-container"></div>
                 <div className="task-input-container">
                     <input type="text"
@@ -13,34 +13,57 @@ class TodoHeading extends Component {
                            placeholder="What needs to be done?"
                     />
                 </div>
-            </div>
+            </header>
         )
     }
 }
 class TodoContent extends Component {
     render() {
-        return (
-            <div className="todo-content">
+        if (this.props.tasks.length > 0) {
+            return (
+                <section className="todo-content">
 
-            </div>
-        )
+                </section>
+            )
+        }
+        else {
+            return null;
+        }
+    }
+}
+class TodoFooter extends Component {
+    render() {
+        if (this.props.show) {
+            return (
+                <footer className="todo-footer">
+
+                </footer>
+            )
+        }
+        else {
+            return null;
+        }
     }
 }
 
 
-class App extends Component {
+class TodoApp extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            tasks: this.props.tasks
+        }
     }
     render() {
         return (
             <div className='todo-container'>
                 <TodoHeading />
-                <TodoContent />
-
+                <TodoContent tasks={ this.state.tasks }/>
+                <TodoFooter show={ this.state.tasks.length > 0 ? true : false} />
             </div>
+
         )
     }
 }
 
-export default App;
+export default TodoApp;

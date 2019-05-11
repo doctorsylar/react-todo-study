@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './js/script';
-import App from './app/app';
+import TodoApp from './app/app';
 
 // JS CODE
-let tasks = localStorage.getItem('tasks');
+// let tasks = localStorage.getItem('tasks');
+let tasks = [
+    'task1',
+    'task2'
+];
 
 // Rendering RoomList component
-ReactDOM.render(<App/>, document.querySelector('#app'));
+ReactDOM.render(<TodoApp tasks={ tasks }/>, document.querySelector('#app'));

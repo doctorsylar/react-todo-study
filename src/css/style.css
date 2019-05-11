@@ -53,3 +53,8 @@ h1 {
     border: none;
     padding: 0 5px;
 }
+.todo-heading .task-input::-moz-placeholder,
+.todo-heading .task-input::-webkit-input-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}

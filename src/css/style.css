@@ -6,12 +6,12 @@
 body {
     background-color: #ccc3b5;
 }
-h1 {
-    color: rgba(190, 0, 0, 0.60);
-    text-align: center;
-}
 .app-container {
     margin: 10% auto 0;
+}
+.app-container h1 {
+    color: rgba(190, 0, 0, 0.35);
+    text-align: center;
 }
 #app {
     margin: 0 auto;
@@ -30,15 +30,15 @@ h1 {
     display: flex;
     justify-content: flex-start;
 }
-.todo-heading .toggle-all-container {
-    width: 50px;
+.todo-heading .toggle-all {
+    width: 65px;
     transform: rotate(90deg);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.todo-heading .toggle-all-container::before {
+.todo-heading .toggle-all::before {
     content: '❯';
     font-size: 22px;
     color: #e6e6e6;
@@ -57,4 +57,53 @@ h1 {
 .todo-heading .task-input::-webkit-input-placeholder {
     color: #cccccc;
     font-style: italic;
+}
+/* CONTENT */
+.todo-content {}
+.todo-content .todo-list {
+    list-style: none;
+}
+.todo-content .todo-item {
+    background: url(../img/empty.png) 10px center no-repeat;
+    background-size: 35px;
+    height: 50px;
+    padding-left: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-content .todo-item.completed {
+    background-image: url(../img/verified.png);
+}
+.todo-content .todo-item .completed-checkbox-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    justify-content: center;
+}
+.todo-content .todo-item .completed-checkbox {
+    height: 35px;
+    width: 35px;
+    opacity: 0;
+}
+.todo-content .todo-item .todo-item-name {
+    flex-grow: 1;
+}
+
+/* FOOTER */
+.todo-footer::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    overflow: hidden;
+    box-shadow:
+            0 1px 1px rgba(0, 0, 0, 0.2),
+            0 8px 0 -3px #f6f6f6,
+            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+            0 16px 0 -6px #f6f6f6,
+            0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }

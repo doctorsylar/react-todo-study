@@ -37,6 +37,17 @@ module.exports = {
                         minimize: true
                     }
                 }],
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'img'
+                        },
+                    },
+                ],
             }
         ]
     },
@@ -48,6 +59,7 @@ module.exports = {
         compress: true,
         port: 9000
     },
+    devtool: 'source-map',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({

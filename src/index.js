@@ -5,11 +5,12 @@ import TodoApp from './app/app';
 
 // JS CODE
 // let tasks = [
-//     { 'id' : 'task1', 'name' : 'task1', 'completed' : false },
-//     { 'id' : 'task2', 'name' : 'task1', 'completed' : false }
+//     { 'id' : 'task1', 'name' : 'task1', 'completed' : true },
+//     { 'id' : 'task2', 'name' : 'task2', 'completed' : false }
 // ];
 // localStorage.setItem('tasks', JSON.stringify(tasks));
-let tasks = JSON.parse(localStorage.getItem('tasks'));
+// tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 // Rendering RoomList component
 ReactDOM.render(<TodoApp tasks={ tasks }/>, document.querySelector('#app'));
